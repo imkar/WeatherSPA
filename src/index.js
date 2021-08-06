@@ -11,7 +11,8 @@ class App extends React.Component {
             isLoaded: false,
             temp: "",
             feelsLike: "",
-            cityName: ""
+            cityName: "",
+            weatherDescription: ""
         }
     }
 
@@ -34,7 +35,8 @@ class App extends React.Component {
                 isLoaded: true,
                 temp: responseJson.main.temp,
                 feelsLike: responseJson.main.feels_like,
-                cityName: responseJson.name
+                cityName: responseJson.name,
+                weatherDescription: responseJson.weather[0].main
             });
             return responseJson;
         }
@@ -57,6 +59,7 @@ class App extends React.Component {
                             temp={this.state.temp} 
                             feelsLike={this.state.feelsLike} 
                             cityName={this.state.cityName}
+                            weatherDescription={this.state.weatherDescription}
                         />
                     }
                 </div>
