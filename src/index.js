@@ -51,9 +51,36 @@ class App extends React.Component {
         
         return (
             <div>
-                <h1>Weather Single Page Application</h1>
+                <h1 style={{textAlign:"center",margin:"50px"}}>Weather Single Page Application</h1>
                 <div className="outer-box">
                     { 
+                    this.state.isLoaded && 
+                        <WeatherApp 
+                            temp={this.state.temp} 
+                            feelsLike={this.state.feelsLike} 
+                            cityName={this.state.cityName}
+                            weatherDescription={this.state.weatherDescription}
+                        />
+                    }
+                                        { 
+                    this.state.isLoaded && 
+                        <WeatherApp 
+                            temp={this.state.temp} 
+                            feelsLike={this.state.feelsLike} 
+                            cityName={this.state.cityName}
+                            weatherDescription={this.state.weatherDescription}
+                        />
+                    }
+                                        { 
+                    this.state.isLoaded && 
+                        <WeatherApp 
+                            temp={this.state.temp} 
+                            feelsLike={this.state.feelsLike} 
+                            cityName={this.state.cityName}
+                            weatherDescription={this.state.weatherDescription}
+                        />
+                    }
+                                        { 
                     this.state.isLoaded && 
                         <WeatherApp 
                             temp={this.state.temp} 

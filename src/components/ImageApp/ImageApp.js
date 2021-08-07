@@ -12,7 +12,7 @@ const ImageApp = (props) => {
           }
     }
 
-    return <img src={handleImg()} alt="weather state"></img>;
+    return <img src={handleImg()} alt="weather state" width="100px" height="100px" style={{marginTop:"25px"}}></img>;
 }
 
 export default ImageApp;
