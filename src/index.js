@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { SearchApp } from './components/SearchApp';
 import { WeatherApp } from './components/WeatherApp';
 import "./index.css";
 
@@ -59,7 +60,9 @@ class App extends React.Component {
             <div class="bg bg3"></div>
             <div>
                 <h1 style={{textAlign:"center",margin:"50px"}}>Weather Single Page Application</h1>
+                <SearchApp />
                 <div className="outer-box background-div">
+                    
                     { 
                     this.state.isLoaded && 
                         <WeatherApp 
