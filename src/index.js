@@ -12,13 +12,14 @@ class App extends React.Component {
             temp: "",
             feelsLike: "",
             cityName: "",
-            weatherDescription: ""
+            weatherDescription: "",
+            icon: ""
         }
     }
 
 
     componentDidMount() {
-        const apiKey = "";
+        const apiKey = "***REMOVED***";
         const cityName = "Istanbul"
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
         
@@ -31,12 +32,14 @@ class App extends React.Component {
             const responseJson = await response.json();
             console.log(responseJson);
             console.log(responseJson.main);
+            console.log(responseJson.weather[0].icon)
             this.setState({
                 isLoaded: true,
                 temp: responseJson.main.temp,
                 feelsLike: responseJson.main.feels_like,
                 cityName: responseJson.name,
-                weatherDescription: responseJson.weather[0].main
+                weatherDescription: responseJson.weather[0].main,
+                icon: responseJson.weather[0].icon
             });
             return responseJson;
         }
@@ -51,6 +54,10 @@ class App extends React.Component {
         
         return (
             <div>
+            <div class="bg"></div>
+            <div class="bg bg2"></div>
+            <div class="bg bg3"></div>
+            <div>
                 <h1 style={{textAlign:"center",margin:"50px"}}>Weather Single Page Application</h1>
                 <div className="outer-box">
                     { 
@@ -60,36 +67,31 @@ class App extends React.Component {
                             feelsLike={this.state.feelsLike} 
                             cityName={this.state.cityName}
                             weatherDescription={this.state.weatherDescription}
+                            icon={this.state.icon}
                         />
                     }
-                                        { 
+                    { 
                     this.state.isLoaded && 
                         <WeatherApp 
                             temp={this.state.temp} 
                             feelsLike={this.state.feelsLike} 
                             cityName={this.state.cityName}
                             weatherDescription={this.state.weatherDescription}
+                            icon={this.state.icon}
                         />
                     }
-                                        { 
+                    { 
                     this.state.isLoaded && 
                         <WeatherApp 
                             temp={this.state.temp} 
                             feelsLike={this.state.feelsLike} 
                             cityName={this.state.cityName}
                             weatherDescription={this.state.weatherDescription}
-                        />
-                    }
-                                        { 
-                    this.state.isLoaded && 
-                        <WeatherApp 
-                            temp={this.state.temp} 
-                            feelsLike={this.state.feelsLike} 
-                            cityName={this.state.cityName}
-                            weatherDescription={this.state.weatherDescription}
+                            icon={this.state.icon}
                         />
                     }
                 </div>
+            </div>
             </div>
 
         )

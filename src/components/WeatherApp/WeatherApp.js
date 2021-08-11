@@ -22,11 +22,11 @@ const WeatherApp = (props) => {
     return (
         <div className="inner-box">
             <div className="image-box">
-                <ImageApp className="image-itself" val={props.weatherDescription}/>
+                <ImageApp className="image-itself" val={props.icon}/>
             </div>
             <div className="info-box">
                 <div className="celcius-box">
-                    <h1>{toCelcius(props.temp)}<sup>&#8451;</sup></h1>
+                    <h1>{toCelcius(props.temp)}<sup className="degree">°C</sup></h1>
                 </div>
                 <div className="name-box">
                     <p>{props.weatherDescription}</p>
@@ -39,7 +39,7 @@ const WeatherApp = (props) => {
             </div>
 
             <div className="extra-box">
-                <p>Feels like: {toCelcius(props.feelsLike)}<sup>&#8451;</sup></p>
+                <p>Feels like: {toCelcius(props.feelsLike)}<sup>°C</sup></p>
             </div>
 
         </div>

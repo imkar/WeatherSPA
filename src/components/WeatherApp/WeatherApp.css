@@ -1,11 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200&family=Cairo&family=Open+Sans+Condensed:wght@300&family=Prompt:wght@200&family=Ubuntu+Condensed&display=swap");
+
 .inner-box {
   text-align: center;
-  background: aqua;
+  background: #f2f2f2;
   width: 250px;
   height: 250px;
-  border: 2px solid black;
-  border-radius: 20px;
-  margin: 10px 10px;
+  /* border: 2px solid #6b6b6b; */
+  border-radius: 8px;
+  /* box-shadow: 7px 7px #6b6b6b, -7px -7px 10px #6b6b6b; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 20px 20px;
   display: flex;
   flex-direction: column;
   /* align-items: center; */
@@ -22,11 +28,11 @@
 }
 
 .image-box {
-  background-color: white;
+  background-color: #f2f2f2;
   width: 100%;
   height: 50%;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .info-box {
@@ -34,26 +40,53 @@
   justify-content: space-around;
   margin: 0 0;
   padding: 0 auto;
+  padding-bottom: 12px;
   align-items: center;
-  height: 50%;
-  background-color: white;
+  height: 70%;
+  background-color: #f2f2f2;
 }
 
 .extra-box {
-  background-color: #2b2e2c;
-  height: 50%;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  background-color: #636363;
+  height: 30%;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 .extra-box p {
   color: white;
-  margin: 20px;
+  padding-top: 5px;
+  /* margin: 20px; */
 }
 .date-box {
-  background: #5ab2e6;
+  background: #f2f2f2;
+  border-radius: 8px;
+  border: 1px solid #636363;
   padding: 15px;
 }
 
 .celcius-box {
   left: 0;
+}
+
+.celcius-box h1 {
+  /* font-family: "Barlow", sans-serif; */
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.degree {
+  /* font-family: "Barlow", sans-serif; */
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.name-box {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.date-box {
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.extra-box {
+  font-family: "Ubuntu Condensed", sans-serif;
 }
