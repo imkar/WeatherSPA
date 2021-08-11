@@ -14,8 +14,15 @@
   margin: 20px 20px;
   display: flex;
   flex-direction: column;
+  transition: all 300ms ease-in-out;
+  position: relative;
+  top: 0;
   /* align-items: center; */
   /* justify-content: center; */
+}
+
+.inner-box:hover {
+  top: -0.5em;
 }
 
 /* 

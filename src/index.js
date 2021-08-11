@@ -59,7 +59,7 @@ class App extends React.Component {
             <div class="bg bg3"></div>
             <div>
                 <h1 style={{textAlign:"center",margin:"50px"}}>Weather Single Page Application</h1>
-                <div className="outer-box">
+                <div className="outer-box background-div">
                     { 
                     this.state.isLoaded && 
                         <WeatherApp 
