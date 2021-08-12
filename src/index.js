@@ -20,7 +20,7 @@ class App extends React.Component {
 
 
     componentDidMount() {
-        const apiKey = "";
+        const apiKey = "***REMOVED***";
         const cityName = "Istanbul"
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
         
