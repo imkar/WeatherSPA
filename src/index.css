@@ -28,7 +28,7 @@ body {
   justify-content: center;
   border-radius: 40px;
   backdrop-filter: blur(6px);
-  background: rgba(217, 242, 255, 0.5);
+  /* background: rgba(217, 242, 255, 0.5); */
 }
 
 .bg {

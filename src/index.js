@@ -9,11 +9,11 @@ import "./index.css";
 const App = () => {
 
     const [isLoaded,setIsLoaded] = useState(false);
-    const [temp,setTemp] = useState();
+/*     const [temp,setTemp] = useState();
     const [feelsLike,setFeelsLike] = useState();
     const [cityItem,setCityItem] = useState();
     const [weatherDescription,setWeatherDescription] = useState();
-    const [icon,setIcon] = useState();
+    const [icon,setIcon] = useState(); */
     const [box,setBox] = useState([]);
 /*     const [searchResult,setSearchResult] = useState(""); */
 
@@ -21,8 +21,7 @@ const App = () => {
     const fetchByCityName = async (item) => {
             
         const apiKey = "***REMOVED***";
-        const cityName = item
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${apiKey}`;
         const response = await fetch(url);
 
         if (!response.ok) {
@@ -31,16 +30,13 @@ const App = () => {
         }
 
         const responseJson = await response.json();
+        /*
         console.log(responseJson);
         console.log(responseJson.main);
         console.log(responseJson.weather[0].icon)
-        setIsLoaded(true);
-        setTemp(responseJson.main.temp);
-        setFeelsLike(responseJson.main.feels_like);
-        setCityItem(responseJson.name);
-        setWeatherDescription(responseJson.weather[0].main);
-        setIcon(responseJson.weather[0].icon);
+        */
 
+        setIsLoaded(true);
         setBox(box => 
             [...box,         
                 {
@@ -53,7 +49,6 @@ const App = () => {
                 }
             ]
         );
-
         return responseJson;
     }
     
@@ -66,7 +61,7 @@ const App = () => {
             .catch((error) => {
                 console.log(error.message);
             })
-            /* e.target.reset(); */
+            e.target.reset();
         }
     }
 
