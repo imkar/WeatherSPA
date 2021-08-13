@@ -22,7 +22,7 @@ const WeatherApp = (props) => {
     return (
         <div className="inner-box">
             <div className="image-box">
-                <ImageApp className="image-itself" val={props.icon}/>
+                <ImageApp className="image-itself" val={props.icon} isLoaded={props.isLoaded}/>
             </div>
             <div className="info-box">
                 <div className="celcius-box">
@@ -30,7 +30,7 @@ const WeatherApp = (props) => {
                 </div>
                 <div className="name-box">
                     <p>{props.weatherDescription}</p>
-                    <p>{props.cityName}</p>
+                    <p>{props.city}</p>
                 </div>
                 <div className="date-box">
                     <p>{currentDay()}</p>
