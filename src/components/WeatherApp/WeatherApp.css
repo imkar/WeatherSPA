@@ -18,7 +18,8 @@
   position: relative;
   top: 0;
   /* align-items: center; */
-  /* justify-content: center; */
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .inner-box:hover {
@@ -60,14 +61,17 @@
   /* margin: 20px; */
 }
 .date-box {
+  display: inline-block;
+
   background: #f2f2f2;
   border-radius: 8px;
   border: 1px solid #636363;
-  padding: 15px;
+  padding: 10px;
 }
 
 .celcius-box {
   left: 0;
+  display: inline-block;
 }
 
 .celcius-box h1 {
@@ -83,6 +87,7 @@
 .name-box {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.05em;
+  display: inline-block;
 }
 
 .date-box {
