@@ -8,9 +8,10 @@ const WeatherApp = (props) => {
         return Math.round(temperature - 273.15);
     }
 
-    const currentDay = () => {
+    const currentDay = (city) => {
         let dateObj = new Date();
-        return `${dateObj.getDay()}`
+        
+        return `${dateObj.getDate()}`
     }
 
     const currentMonth = () => {
@@ -21,7 +22,11 @@ const WeatherApp = (props) => {
     }
     return (
         <div className="inner-box">
+
             <div className="image-box">
+                <div className="button-box">
+                    <button className="button-itself">X</button>
+                </div>
                 <ImageApp className="image-itself" val={props.icon} isLoaded={props.isLoaded}/>
             </div>
             <div className="info-box">
@@ -33,8 +38,8 @@ const WeatherApp = (props) => {
                     <p>{props.city}</p>
                 </div>
                 <div className="date-box">
-                    <p>{currentDay()}</p>
-                    <p>{currentMonth()}</p>
+                    <p className="current-month">{currentMonth(props.city)}</p>
+                    <p className="current-day">{currentDay()}</p>
                 </div>
             </div>
 

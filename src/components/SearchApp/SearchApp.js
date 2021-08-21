@@ -8,7 +8,7 @@ const SearchApp = (props) => {
             <label htmlFor='inputbarItem'></label>
             <div className="searchbar">
                 <i class="fa fa-search searchIcon"></i>
-                <input type="text" placeholder="Type here the city..." className="bar" name="inputbar" id="inputbar"></input>
+                <input type="text" placeholder="Type here the city..." className="bar" name="inputbar" id="inputbar" autocomplete="off"></input>
             </div>
         </form>
     );
