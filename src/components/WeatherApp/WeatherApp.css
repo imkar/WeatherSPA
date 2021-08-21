@@ -5,9 +5,7 @@
   background: #f2f2f2;
   width: 250px;
   height: 250px;
-  /* border: 2px solid #6b6b6b; */
   border-radius: 8px;
-  /* box-shadow: 7px 7px #6b6b6b, -7px -7px 10px #6b6b6b; */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -17,7 +15,6 @@
   transition: all 100ms ease-in-out;
   position: relative;
   top: 0;
-  /* align-items: center; */
   justify-content: center;
   flex-shrink: 0;
 }
@@ -43,7 +40,6 @@
   justify-content: space-around;
   margin: 0 0;
   padding: 0 auto;
-  padding-bottom: 12px;
   align-items: center;
   height: 70%;
   background-color: #f2f2f2;
@@ -54,19 +50,25 @@
   height: 30%;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  font-family: "Ubuntu Condensed", sans-serif;
 }
 .extra-box p {
   color: white;
   padding-top: 5px;
-  /* margin: 20px; */
 }
+
 .date-box {
   display: inline-block;
-
+  font-family: "Open Sans Condensed", sans-serif;
   background: #f2f2f2;
   border-radius: 8px;
   border: 1px solid #636363;
-  padding: 10px;
+  padding: 10px 20px 10px 20px;
+}
+
+.date-box p {
+  margin: 0 0;
+  align-items: center;
 }
 
 .celcius-box {
@@ -77,6 +79,7 @@
 .celcius-box h1 {
   /* font-family: "Barlow", sans-serif; */
   font-family: "Open Sans Condensed", sans-serif;
+  margin: 0 0;
 }
 
 .degree {
@@ -88,12 +91,9 @@
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.05em;
   display: inline-block;
+  align-items: center;
 }
 
-.date-box {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-
-.extra-box {
-  font-family: "Ubuntu Condensed", sans-serif;
+.name-box p {
+  margin: 0 0;
 }

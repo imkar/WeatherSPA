@@ -5,7 +5,7 @@ import { ImageApp } from '../ImageApp';
 const WeatherApp = (props) => {
 
     const toCelcius = (temperature) => {
-        return parseInt(temperature / 10);
+        return Math.round(temperature - 273.15);
     }
 
     const currentDay = () => {
@@ -29,7 +29,7 @@ const WeatherApp = (props) => {
                     <h1>{toCelcius(props.temp)}<sup className="degree">°C</sup></h1>
                 </div>
                 <div className="name-box">
-                    <p>{props.weatherDescription}</p>
+                    <p>{props.weatherDescription},</p>
                     <p>{props.city}</p>
                 </div>
                 <div className="date-box">

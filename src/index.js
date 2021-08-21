@@ -24,11 +24,11 @@ const App = () => {
 
         const responseJson = await response.json();
 
-        /*
+
         console.log(responseJson);
         console.log(responseJson.main);
         console.log(responseJson.weather[0].icon)
-        */
+
 
         setIsLoaded(true);
         setBox(box => 
@@ -68,7 +68,9 @@ const App = () => {
             <div class="bg bg2"></div>
             <div class="bg bg3"></div>
             <div>
-                <h1 style={{textAlign:"center",margin:"50px"}}>Weather Single Page Application</h1>
+                <div className="header-style">
+                    <h1>Weather Single Page Application</h1>
+                </div>
                 <SearchApp onKeyDown={handleOnKeyPress}/>
                 <div className="outer-box background-div">
                 

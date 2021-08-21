@@ -8,6 +8,21 @@ body {
   background-color: #f2f2f2;
 }
 
+.header-style {
+  /*   text-align: center; */
+  background: rgba(217, 242, 255, 0.5);
+  border-radius: 40px;
+  width: 50%;
+  height: 50%;
+  margin: 50px auto 10px auto;
+}
+
+.header-style h1 {
+  text-align: center;
+  margin: 0px auto;
+  display: block;
+}
+
 .outer-box {
   /* background: linear-gradient(-60deg, 20deg, rgb(80, 214, 238) 50%, #09f 50%); */
   width: 60%;
