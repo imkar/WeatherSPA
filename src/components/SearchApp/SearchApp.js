@@ -7,8 +7,8 @@ const SearchApp = (props) => {
         <form className='form' onKeyPress={e => props.onKeyDown(e)}>
             <label htmlFor='inputbarItem'></label>
             <div className="searchbar">
-                <i class="fa fa-search searchIcon"></i>
-                <input type="text" placeholder="Type here the city..." className="bar" name="inputbar" id="inputbar" autocomplete="off"></input>
+                <i className="fa fa-search searchIcon"></i>
+                <input type="text" placeholder="Type here the city..." className="bar" name="inputbar" id="inputbar" autoComplete="off"></input>
             </div>
         </form>
     );

@@ -10,6 +10,7 @@ const App = () => {
 
     const [isLoaded,setIsLoaded] = useState(false);
     const [box,setBox] = useState([]);
+    const [count,setCount] = useState(0);
 
     const fetchByCityName = async (item) => {
             
@@ -31,6 +32,7 @@ const App = () => {
 
 
         setIsLoaded(true);
+        setCount(count+1);
         setBox(box => 
             [...box,         
                 {
@@ -39,7 +41,8 @@ const App = () => {
                     city: responseJson.name,
                     weatherDescription: responseJson.weather[0].main,
                     icon: responseJson.weather[0].icon,
-                    isLoaded: true
+                    isLoaded: true,
+                    count: count
                 }
             ]
         );
@@ -49,24 +52,26 @@ const App = () => {
     const handleOnKeyPress = (e) => {
         if (e.key === 'Enter'){
             e.preventDefault();
-            // console.log(e.target.value)
             const item = e.target.value;
             fetchByCityName(item)
             .catch((error) => {
                 console.log(error.message);
             })
-            // Remove inputted city after pressed 'Enter'. (Not Working)
-            /* e.target.reset(); */
         }
     }
 
+    const handleRemove = (e) => {
+        const itemNum = e.target.getAttribute('data-key');
+        const newBox = box.filter(item => item.count !== parseInt(itemNum));
+        setBox(newBox);
+    }   
 
     return (
 
         <div>
-            <div class="bg"></div>
-            <div class="bg bg2"></div>
-            <div class="bg bg3"></div>
+            <div className="bg"></div>
+            <div className="bg bg2"></div>
+            <div className="bg bg3"></div>
             <div>
                 <div className="header-style">
                     <h1>Weather Single Page Application</h1>
@@ -84,6 +89,7 @@ const App = () => {
                             console.log(` map method: ${item.weatherDescription}`)
                             console.log(` map method: ${item.icon}`)
                             console.log(` map method: ${item.isLoaded}`)
+                            console.log(` map method: ${item.count}`)
                         */
                             return <WeatherApp 
                                 temp={item.temp} 
@@ -92,6 +98,8 @@ const App = () => {
                                 weatherDescription={item.weatherDescription}
                                 icon={item.icon}
                                 isLoaded={item.isLoaded}
+                                handleRemove={handleRemove}
+                                keyid={item.count}
                             />;
                         }
                     )

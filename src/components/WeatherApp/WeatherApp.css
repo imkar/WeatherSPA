@@ -42,7 +42,7 @@
 .button-itself {
   border: none;
   background-color: transparent;
-  color: white;
+  color: #636363;
   width: 20px;
   height: 20px;
 }
@@ -112,7 +112,7 @@
 .name-box {
   /* font-family: "Open Sans Condensed", sans-serif; */
   font-family: "Noto Sans TC", sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   display: inline-block;
   align-items: center;
 }

@@ -25,7 +25,7 @@ const WeatherApp = (props) => {
 
             <div className="image-box">
                 <div className="button-box">
-                    <button className="button-itself">X</button>
+                    <button data-key={props.keyid} onClick={e => props.handleRemove(e)} className="button-itself">X</button>
                 </div>
                 <ImageApp className="image-itself" val={props.icon} isLoaded={props.isLoaded}/>
             </div>
