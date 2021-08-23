@@ -115,6 +115,8 @@
   letter-spacing: 0.02em;
   display: inline-block;
   align-items: center;
+  /*   max-width: 40px;
+  max-height: 40px; */
 }
 
 .name-box p {

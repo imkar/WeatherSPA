@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -9,30 +11,28 @@ body {
 }
 
 .header-style {
-  /*   text-align: center; */
   background: rgba(217, 242, 255, 0.5);
   border-radius: 40px;
-  width: 50%;
-  height: 50%;
+  width: 25%;
+  height: 70%;
   margin: 50px auto 10px auto;
+  box-shadow: -10px -10px #f2f2f2;
 }
 
 .header-style h1 {
   text-align: center;
   margin: 0px auto;
   display: block;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .outer-box {
-  /* background: linear-gradient(-60deg, 20deg, rgb(80, 214, 238) 50%, #09f 50%); */
   width: 60%;
   height: 750px;
   display: flex;
-  /* background-color: transparent; */
   margin: 0 auto;
   flex-wrap: wrap;
   justify-content: center;
-  backdrop-filter: blur(6px);
   border-radius: 80px;
 }
 
@@ -42,13 +42,108 @@ body {
   margin: 0 auto;
   justify-content: center;
   border-radius: 40px;
-  backdrop-filter: blur(6px);
-  /* background: rgba(217, 242, 255, 0.5); */
 }
 
 .bg {
   animation: slide 3s ease-in-out infinite alternate;
   background-image: linear-gradient(-60deg, rgb(80, 214, 238) 50%, #09f 50%);
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-sunny {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(239, 243, 23) 50%,
+    rgb(243, 178, 39) 50%
+  );
+
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-night {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(37, 49, 212) 50%,
+    rgb(18, 25, 117) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-snowy {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(207, 222, 224) 50%,
+    rgb(166, 209, 238) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-rainy {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(137, 142, 165) 50%,
+    rgb(51, 77, 221) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-foggy {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(97, 100, 107) 50%,
+    rgb(31, 32, 32) 50%
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.5;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+.bg-thunderstorm {
+  animation: slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(
+    -60deg,
+    rgb(7, 50, 151) 50%,
+    rgb(0, 109, 45) 50%
+  );
   bottom: 0;
   left: -50%;
   opacity: 0.5;

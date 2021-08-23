@@ -21,7 +21,7 @@ const WeatherApp = (props) => {
         return `${monthNames[dateObj.getMonth()]}`
     }
     return (
-        <div className="inner-box">
+        <div className="inner-box" data-key={props.keyid} onMouseEnter= {e => props.handleHover(e)}>
 
             <div className="image-box">
                 <div className="button-box">
