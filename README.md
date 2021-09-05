@@ -2,9 +2,9 @@
 
 **WeatherSPA is a Single Page Web Application project for showing the current weather of input city or country.**
 
-### It is demonstration of async/await fetch using ReactJS.
+It is demonstration of async/await fetch using ReactJS.
 
-### It uses OpenWeather API for forecast data. In order to use run it, create a free account from https://openweathermap.org/api.
+It uses OpenWeather API for forecast data. In order to use run it, create a free account from https://openweathermap.org/api.
 
 <br>
 
@@ -22,4 +22,4 @@ Simply run,
 
 `$ npm start`
 
-`Browse: http://localhost:3000`
+Browse: http://localhost:3000
