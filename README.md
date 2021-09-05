@@ -1,5 +1,7 @@
 # Daily Weather Forecast
 
+![alt text](https://github.com/imkar/WeatherSPA/blob/main/WeatherAPI-Gif.mp4)
+
 **WeatherSPA is a Single Page Web Application project for showing the current weather of input city or country.**
 
 It is demonstration of async/await fetch using ReactJS.
