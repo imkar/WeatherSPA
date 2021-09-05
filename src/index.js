@@ -18,7 +18,7 @@ const App = () => {
 
     const fetchByCityName = async (item) => {
             
-        const apiKey = "";
+        const apiKey = "YOUR_API_KEY";
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${apiKey}`;
         const response = await fetch(url);
 
@@ -29,11 +29,12 @@ const App = () => {
 
         const responseJson = await response.json();
 
-        
+        /*
         console.log(responseJson);
         console.log(responseJson.main);
         console.log(responseJson.weather[0].icon)
         console.log(responseJson.weather[0].id);
+        */
 
         setIsLoaded(true);
         setCount(count+1);
@@ -107,15 +108,15 @@ const App = () => {
     }
 
     const handleHover = (e) => {
-        console.log(e);
+        // console.log(e);
         const itemNum = e.currentTarget.getAttribute('data-key');
-        console.log(`itemNum ==> ${itemNum}`)
+        // console.log(`itemNum ==> ${itemNum}`)
         const foundBox = box.filter(x => x.count === parseInt(itemNum));
-        console.log(foundBox[0].icon);
+        // console.log(foundBox[0].icon);
         const foundId = findIdForWeather('' + foundBox[0].icon);
-        console.log(foundId)
+        // console.log(foundId)
         setBackgroundClass(foundId);
-        console.log(foundId + ' bg2')
+        // console.log(foundId + ' bg2')
         setBackgroundClassSecond(foundId + ' bg2');
         setBackgroundClassThird(foundId + ' bg3');
     }
@@ -128,7 +129,7 @@ const App = () => {
             <div className={backgroundClassThird}></div>
             <div>
                 <div className="header-style">
-                    <h1>Weather API</h1>
+                    <h1>Daily Weather</h1>
                 </div>
                 <SearchApp onKeyDown={handleOnKeyPress}/>
                 <div className="outer-box background-div">
