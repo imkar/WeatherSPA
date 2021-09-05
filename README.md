@@ -13,7 +13,6 @@ It uses OpenWeather API for forecast data. In order to use run it, create a free
 # Place the API Key on index.js Line 21.
 
 ` const apiKey = "YOUR_API_KEY";`
-
 <br>
 
 # How to Install and Run:
