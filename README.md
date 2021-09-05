@@ -1,6 +1,6 @@
 # Daily Weather Forecast
 
-![alt text](https://github.com/imkar/WeatherSPA/blob/main/WeatherAPI-Gif.mp4)
+![alt text](https://github.com/imkar/WeatherSPA/blob/main/WeatherGif.gif)
 
 **WeatherSPA is a Single Page Web Application project for showing the current weather of input city or country.**
 
