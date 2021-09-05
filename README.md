@@ -24,3 +24,5 @@ Simply run,
 `$ npm start`
 
 Browse: http://localhost:3000
+
+Have fun!
